@@ -6,16 +6,21 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  let who = ["The cat", "My grandpa", "Her turtle", "My bird"];
+  let who = ["The cat", "My panda", "Her hippo", "My bird"];
   let action = ["ate", "peed", "crushed", "flies"];
-  let what = ["my homework", "the keys", "the car"];
-  let when = ["before the class", "right on time", "when I finished", "during my lunch", "while I was praying",
+  let what = ["my cake", "the keys", "the car"];
+  let when = [
+    "during class",
+    "outside",
+    "when I finished",
+    "during my lunch",
+    "while I was peeing"
   ];
 
   function randomElement(array) {
-    return array[Math.round(Math.random() * array.length)];
+    return array[Math.floor(Math.random() * array.length)];
   }
-  let excuse =
+  let my_excuse =
     randomElement(who) +
     " " +
     randomElement(action) +
@@ -23,8 +28,10 @@ window.onload = function() {
     randomElement(what) +
     " " +
     randomElement(when) +
-    " " +
-    console.log("Hello Rigo from the console!");
-  console.log(excuse);
- 
+    " ";
+  console.log("Hello Tipo from the console!");
+  console.log(my_excuse);
+  const elementTheExcuse = document.getElementsByTagName("p");
+  elementTheExcuse[0].innerText = my_excuse;
 };
+
