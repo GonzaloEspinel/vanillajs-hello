@@ -20,7 +20,7 @@ window.onload = function() {
     function randomAnswer(array) {
         return array[Math.floor(Math.random() * array.length)];
     }
-    let my_excuse = randomAnswer(who).concat(randomAnswer(action), randomAnswer(what), randomAnswer(when));
+    let my_excuse = randomAnswer(who) .concat(randomAnswer(action), randomAnswer(what), randomAnswer(when));
     console.log("Hello I'm the Tipo from the console!");
     console.log(my_excuse);
 
